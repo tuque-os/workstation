@@ -77,15 +77,15 @@ build-iso: build && (_build-bib "iso" "iso.toml")
 
 build-vm: build-qcow2
 
-run-vm ram="8G":
+run-vm:
     #!/usr/bin/env bash
     set -euo pipefail
 
     qemu-system-x86_64 \
     -M accel=kvm \
     -cpu host \
-    -smp 12 \
-    -m {{ ram }} \
+    -smp 6,sockets=1,dies=1,cores=6,threads=1 \
+    -m 8G \
     -bios /usr/share/OVMF/OVMF_CODE.fd \
     -serial stdio \
     -snapshot output/qcow2/disk.qcow2
