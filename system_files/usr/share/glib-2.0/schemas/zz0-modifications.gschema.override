@@ -1,0 +1,6 @@
+[org.gnome.desktop.interface]
+enable-hot-corners=false
+color-scheme="prefer-dark"
+clock-format="12h"
+clock-show-weekday=true
+gtk-enable-primary-paste=false
