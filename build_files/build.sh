@@ -2,6 +2,9 @@
 
 set -ouex pipefail
 
+# copy files
+rsync -rvK /ctx/system_files/ /
+
 # cleanup
 /ctx/build_files/cleanup.sh
 
