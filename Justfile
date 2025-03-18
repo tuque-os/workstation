@@ -3,6 +3,7 @@ export image_name := env("IMAGE_NAME", "tuque/fedora")
 export default_tag := env("DEFAULT_TAG", "latest")
 export fedora_version := env("FEDORA_VERSION", "42")
 export bib_image := env("BIB_IMAGE", "quay.io/centos-bootc/bootc-image-builder:latest")
+export ssh_port := "1867"
 
 build:
     #!/usr/bin/env bash
@@ -88,7 +89,11 @@ run-vm:
     -m 8G \
     -bios /usr/share/OVMF/OVMF_CODE.fd \
     -serial stdio \
+    -device vhost-vsock-pci,id=vhost-vsock-pci0,guest-cid=${ssh_port} \
     -drive if=virtio,format=qcow2,file=output/qcow2/disk.qcow2
+
+vm-ssh:
+    ssh fedora@vsock/{{ ssh_port }}
 
 # check Justfile syntax
 check:
