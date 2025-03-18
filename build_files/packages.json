@@ -1,0 +1,15 @@
+{
+  "include": [
+    "bat",
+    "fd-find",
+    "micro",
+    "ripgrep",
+    "zoxide",
+    "adw-gtk3-theme",
+    "fish"
+  ],
+  "exclude": [
+    "gnome-software",
+    "gnome-tour"
+  ]
+}

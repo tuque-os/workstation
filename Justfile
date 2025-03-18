@@ -23,6 +23,9 @@ build-vm: build-qcow2
 run-vm:
   just_files/run-vm.sh
 
+run-container:
+  podman run --rm -it "${image_name}:${default_tag}" bash
+
 vm-ssh:
   ssh fedora@vsock/{{ ssh_port }}
 
