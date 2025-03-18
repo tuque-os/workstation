@@ -88,7 +88,7 @@ run-vm:
     -m 8G \
     -bios /usr/share/OVMF/OVMF_CODE.fd \
     -serial stdio \
-    -snapshot output/qcow2/disk.qcow2
+    -drive if=virtio,format=qcow2,file=output/qcow2/disk.qcow2
 
 # check Justfile syntax
 check:
