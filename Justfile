@@ -1,9 +1,10 @@
-export repo_organization := env("GITHUB_REPOSITORY_OWNER", "tryton-vanmeer")
-export image_name := env("IMAGE_NAME", "tuque/fedora")
-export default_tag := env("DEFAULT_TAG", "latest")
+export image := env("IMAGE", "localhost/tuque-os/workstation:latest")
 export fedora_version := env("FEDORA_VERSION", "42")
 export bib_image := env("BIB_IMAGE", "quay.io/centos-bootc/bootc-image-builder:latest")
 export ssh_port := "1867"
+
+test:
+  echo $image
 
 build:
   just_files/build.sh
@@ -11,12 +12,12 @@ build:
 _rootful_load_image:
   just_files/rootful-load-image.sh
 
-_build-bib $type $config: _rootful_load_image
+_build-bib $type $config $target_image: _rootful_load_image
   just_files/build-bib.sh
 
-build-qcow2: build && (_build-bib "qcow2" "image.toml")
+build-qcow2 $target_image=(image): build && (_build-bib "qcow2" "image.toml" target_image)
 
-build-iso: build && (_build-bib "iso" "iso.toml")
+build-iso $target_image=(image): build && (_build-bib "iso" "iso.toml" target_image)
 
 build-vm: build-qcow2
 
@@ -24,7 +25,7 @@ run-vm:
   just_files/run-vm.sh
 
 run-container:
-  podman run --rm -it "${image_name}:${default_tag}" bash
+  podman run --rm -it {{ image }} bash
 
 vm-ssh:
   ssh fedora@vsock/{{ ssh_port }}

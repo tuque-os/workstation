@@ -9,5 +9,5 @@ BUILD_ARGS+=("--build-arg" "IMAGE_VERSION=${IMAGE_VERSION}")
 podman build \
   "${BUILD_ARGS[@]}" \
   --pull=newer \
-  --tag "${image_name:?}:${default_tag:?}" \
+  --tag "${image:?}" \
   .

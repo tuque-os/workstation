@@ -3,8 +3,6 @@ set -euo pipefail
 
 mkdir -p "output"
 
-image="localhost/${image_name:?}:${default_tag:?}"
-
 echo "Cleaning up previous build"
 if [[ ${type:?} == iso ]]; then
   sudo rm -rf "output/bootiso" || true
@@ -26,6 +24,6 @@ sudo podman run \
   --type "${type}" \
   --use-librepo=True \
   --rootfs btrfs \
-  "$image"
+  "${target_image:?}"
 
 sudo chown -R "${USER}:${USER}" output
