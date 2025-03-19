@@ -3,8 +3,7 @@ ARG SHA_HEAD_SHORT="dedbeef"
 ARG VERSION=""
 
 FROM scratch AS ctx
-COPY /system_files /system_files
-COPY /build_files /build_files
+COPY / /
 
 FROM quay.io/fedora/fedora-silverblue:${FEDORA_MAJOR_VERSION}
 
