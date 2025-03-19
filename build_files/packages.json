@@ -10,6 +10,8 @@
   ],
   "exclude": [
     "gnome-software",
-    "gnome-tour"
+    "gnome-tour",
+    "gnome-classic-session",
+    "yelp"
   ]
 }
