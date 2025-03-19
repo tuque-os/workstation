@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 
-IMAGE_VERSION="${fedora_version:?}.$(date +%Y%m%d)-$(git rev-parse --short HEAD)"
+ver="${fedora_version:?}.$(date +%Y%m%d)"
 
 BUILD_ARGS=()
-BUILD_ARGS+=("--build-arg" "MAJOR_VERSION=${fedora_version}")
-BUILD_ARGS+=("--build-arg" "IMAGE_VERSION=${IMAGE_VERSION}")
+BUILD_ARGS+=("--build-arg" "FEDORA_MAJOR_VERSION=${fedora_version}")
+BUILD_ARGS+=("--build-arg" "VERSION=${ver}")
+BUILD_ARGS+=("--build-arg" "SHA_HEAD_SHORT=$(git rev-parse --short HEAD)")
 
 podman build \
   "${BUILD_ARGS[@]}" \
