@@ -1,17 +1,18 @@
 {
   "include": [
+    "adw-gtk3-theme",
     "bat",
     "fd-find",
+    "fish",
     "micro",
     "ripgrep",
-    "zoxide",
-    "adw-gtk3-theme",
-    "fish"
+    "starship",
+    "zoxide"
   ],
   "exclude": [
+    "gnome-classic-session",
     "gnome-software",
     "gnome-tour",
-    "gnome-classic-session",
     "yelp"
   ]
 }
