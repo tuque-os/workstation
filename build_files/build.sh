@@ -8,6 +8,7 @@ rsync -rvK /ctx/system_files/ /
 # run scripts
 /ctx/build_files/packages.sh
 /ctx/build_files/gsettings.sh
+/ctx/build_files/image-info.sh
 
 # cleanup
 /ctx/build_files/cleanup.sh
