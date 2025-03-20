@@ -1,10 +1,15 @@
 {
+  "copr": [
+    "atim/starship",
+    "dusansimic/themes"
+  ],
   "include": [
     "adw-gtk3-theme",
     "bat",
     "fd-find",
     "fish",
     "micro",
+    "morewaita-icon-theme",
     "ripgrep",
     "starship",
     "zoxide"
