@@ -9,7 +9,8 @@ IMAGE_LIKE="fedora"
 HOME_URL="https://github.com/tuque-os/workstation"
 DOCUMENTATION_URL="https://github.com/tuque-os/workstation"
 SUPPORT_URL="https://github.com/tuque-os/workstation/issues/"
-CODE_NAME="Workstation-WIP"
+# https://en.wikipedia.org/wiki/Elizabeth_Monk
+CODE_NAME="Carmichael"
 VERSION="${VERSION:-00.00000000}"
 
 # OS Release File
