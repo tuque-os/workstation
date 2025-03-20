@@ -1,0 +1,12 @@
+root = true
+
+[*]
+indent_style = space
+end_of_line = lf
+insert_final_newline = true
+
+[*.{json,sh}]
+indent_size = 2
+
+[Justfile]
+indent_size = 2
