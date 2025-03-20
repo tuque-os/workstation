@@ -15,7 +15,7 @@ VERSION="${VERSION:-00.00000000}"
 # OS Release File
 sed -i "s|^VARIANT_ID=.*|VARIANT_ID=${IMAGE_NAME,}|" /usr/lib/os-release
 sed -i "s|^VARIANT=.*|VARIANT=${IMAGE_NAME}|" /usr/lib/os-release
-sed -i "s|^PRETTY_NAME=.*|PRETTY_NAME=\"${IMAGE_PRETTY_NAME} ${VERSION} (${IMAGE_NAME})" /usr/lib/os-release
+sed -i "s|^PRETTY_NAME=.*|PRETTY_NAME=\"${IMAGE_PRETTY_NAME} ${VERSION} (${IMAGE_NAME})|" /usr/lib/os-release
 sed -i "s|^NAME=.*|NAME=\"$IMAGE_PRETTY_NAME\"|" /usr/lib/os-release
 sed -i "s|^HOME_URL=.*|HOME_URL=\"$HOME_URL\"|" /usr/lib/os-release
 sed -i "s|^DOCUMENTATION_URL=.*|DOCUMENTATION_URL=\"$DOCUMENTATION_URL\"|" /usr/lib/os-release
@@ -29,8 +29,11 @@ sed -i "s|^VERSION_CODENAME=.*|VERSION_CODENAME=\"$CODE_NAME\"|" /usr/lib/os-rel
 sed -i "s|^VERSION=.*|VERSION=\"${VERSION} (${IMAGE_NAME})\"|" /usr/lib/os-release
 sed -i "s|^OSTREE_VERSION=.*|OSTREE_VERSION=\'${VERSION}\'|" /usr/lib/os-release
 
+if [[ -n "${SHA_HEAD_SHORT:-}" ]]; then
+  echo "BUILD_ID=\"$SHA_HEAD_SHORT\"" >>/usr/lib/os-release
+fi
+
 {
-  echo "BUILD_ID=\"$SHA_HEAD_SHORT\""
   echo "IMAGE_ID=\"${IMAGE_NAME}\""
   echo "IMAGE_VERSION=\"${VERSION}\""
 } >>/usr/lib/os-release
