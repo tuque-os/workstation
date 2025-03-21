@@ -1,2 +1,12 @@
 [org/gnome/Ptyxis/Profiles/463f560ae49d566680a303242a9c58a4]
 palette='Catppuccin Mocha'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
+binding='<Control><Alt>t'
+command='ptyxis --new-window'
+name='Open Terminal'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1]
+binding='<Super>e'
+command='nautilus'
+name='Open Files'

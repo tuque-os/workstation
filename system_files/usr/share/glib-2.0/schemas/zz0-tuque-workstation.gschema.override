@@ -31,6 +31,9 @@ recursive-search='never'
 show-create-link=false
 show-image-thumbnails='never'
 
+[org.gnome.settings-daemon.plugins.media-keys]
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
+
 [org.gnome.Ptyxis]
 restore-session=false
 restore-window-size=false
