@@ -1,17 +1,39 @@
 {
   "copr": [
+    "alternateved/eza",
     "atim/starship",
-    "dusansimic/themes"
+    "dusansimic/themes",
+    "ecomaikgolf/typst"
   ],
   "include": [
     "adw-gtk3-theme",
+    "android-tools",
     "bat",
+    "eza",
+    "fastfetch",
     "fd-find",
     "fish",
+    "glow",
+    "gnome-boxes",
+    "hugo",
+    "libratbag-ratbagd",
+    "mame-tools",
     "micro",
     "morewaita-icon-theme",
+    "openssl",
+    "python3-pulsectl",
+    "python3-ramalama",
+    "qemu-img",
+    "qemu-system-x86-core",
+    "qemu-user-binfmt",
+    "qemu-user-static",
+    "qemu",
     "ripgrep",
     "starship",
+    "typst",
+    "wl-clipboard",
+    "yt-dlp",
+    "yubikey-manager",
     "zoxide"
   ],
   "exclude": [
