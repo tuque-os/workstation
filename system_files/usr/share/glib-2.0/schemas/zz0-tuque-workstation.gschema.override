@@ -19,6 +19,9 @@ speed=0.0
 recent-files-max-age=-1
 remember-recent-files=false
 
+[org.gnome.desktop.wm.keybindings]
+switch-windows=['<Alt>Tab']
+
 [org.gnome.nautilus.icon-view]
 default-zoom-level='large'
 
