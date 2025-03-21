@@ -38,9 +38,10 @@ check:
 lint:
   find . -iname "*.sh" -type f -exec shellcheck "{}" ';'
 
-# show gh workflow runs for HEAD commit
+# watch latest gh workflow run
 ci:
-  gh run list --commit $(git rev-parse origin/HEAD)
+  gh run watch \
+  $(gh run list --commit $(git rev-parse origin/HEAD) --json databaseId --jq .[].databaseId)
 
 clean:
   rm -rf output
