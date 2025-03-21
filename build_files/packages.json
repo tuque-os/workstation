@@ -38,6 +38,7 @@
     "zoxide"
   ],
   "exclude": [
+    "fedora-workstation-repositories",
     "gnome-classic-session",
     "gnome-software",
     "gnome-tour",
