@@ -27,3 +27,10 @@ default-folder-viewer='icon-view'
 recursive-search='never'
 show-create-link=false
 show-image-thumbnails='never'
+
+[org.gnome.Ptyxis]
+restore-session=false
+restore-window-size=false
+audible-bell=false
+profile-uuids=['463f560ae49d566680a303242a9c58a4']
+default-profile-uuid='463f560ae49d566680a303242a9c58a4'
