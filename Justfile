@@ -34,9 +34,13 @@ vm-ssh:
 check:
   just --unstable --fmt --check -f Justfile
 
-# Runs shellcheck on all scripts
+# runs shellcheck on all scripts
 lint:
   find . -iname "*.sh" -type f -exec shellcheck "{}" ';'
+
+# show gh workflow runs for HEAD commit
+ci:
+  gh run list --commit $(git rev-parse origin/HEAD)
 
 clean:
   rm -rf output
