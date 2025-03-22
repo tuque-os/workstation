@@ -1,0 +1,27 @@
+{
+  "default": [
+    {
+      "type": "insecureAcceptAnything"
+    }
+  ],
+  "transports": {
+    "docker": {
+      "ghcr.io/tuque-os/workstation": [
+        {
+          "type": "sigstoreSigned",
+          "keyPath": "/etc/pki/containers/ghcr.io-tuque-os-workstation.pub",
+          "signedIdentity": {
+            "type": "matchRepository"
+          }
+        }
+      ]
+    },
+    "docker-daemon": {
+      "": [
+        {
+          "type": "insecureAcceptAnything"
+        }
+      ]
+    }
+  }
+}
