@@ -1,5 +1,5 @@
 ---
-name: Build Custom Image
+name: Build Image
 on:
   pull_request:
     branches:
