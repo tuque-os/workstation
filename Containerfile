@@ -9,9 +9,10 @@ ARG FEDORA_MAJOR_VERSION="42"
 ARG SHA_HEAD_SHORT="dedbeef"
 ARG VERSION=""
 
-RUN --mount=type=cache,dst=/var/cache/libdnf5 \
-    --mount=type=cache,dst=/var/cache/rpm-ostree \
-    --mount=type=bind,from=ctx,src=/,dst=/ctx \
+RUN --mount=type=bind,from=ctx,src=/,dst=/ctx \
+    --mount=type=cache,dst=/var/cache \
+    --mount=type=cache,dst=/var/log \
+    --mount=type=tmpfs,dst=/tmp \
     /ctx/build_files/build.sh
 
 RUN bootc container lint
