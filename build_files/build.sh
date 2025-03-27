@@ -13,6 +13,7 @@ rsync --mkpath -v /ctx/cosign.pub /etc/pki/containers/ghcr.io-tuque-os-workstati
 
 # set default shell
 sed -i "s|^SHELL=/bin/bash|SHELL=/bin/fish|" /etc/default/useradd
+rm /etc/skel/.bash*
 
 # cleanup
 /ctx/build_files/cleanup.sh
