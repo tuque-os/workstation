@@ -24,7 +24,9 @@ sed -i "s|^SUPPORT_URL=.*|SUPPORT_URL=\"$SUPPORT_URL\"|" /usr/lib/os-release
 sed -i "s|^BUG_REPORT_URL=.*|BUG_REPORT_URL=\"$SUPPORT_URL\"|" /usr/lib/os-release
 sed -i "s|^CPE_NAME=\"cpe:/o:fedoraproject:fedora|CPE_NAME=\"cpe:/o:tuque-os:${IMAGE_NAME,,}|" /usr/lib/os-release
 sed -i "s|^DEFAULT_HOSTNAME=.*|DEFAULT_HOSTNAME=\"${IMAGE_ID,,}\"|" /usr/lib/os-release
-sed -i "s|^ID=fedora|ID=${IMAGE_ID,}\nID_LIKE=\"${IMAGE_LIKE}\"|" /usr/lib/os-release
+# https://github.com/osbuild/bootc-image-builder/issues/816
+# sed -i "s|^ID=fedora|ID=${IMAGE_ID,}\nID_LIKE=\"${IMAGE_LIKE}\"|" /usr/lib/os-release
+sed -i "s|^ID=fedora|ID=${IMAGE_LIKE,}\nID_LIKE=\"${IMAGE_LIKE}\"|" /usr/lib/os-release
 sed -i "/^REDHAT_BUGZILLA_PRODUCT=/d; /^REDHAT_BUGZILLA_PRODUCT_VERSION=/d; /^REDHAT_SUPPORT_PRODUCT=/d; /^REDHAT_SUPPORT_PRODUCT_VERSION=/d" /usr/lib/os-release
 sed -i "s|^VERSION_CODENAME=.*|VERSION_CODENAME=\"$CODE_NAME\"|" /usr/lib/os-release
 sed -i "s|^VERSION=.*|VERSION=\"${VERSION} (${IMAGE_NAME})\"|" /usr/lib/os-release
