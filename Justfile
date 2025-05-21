@@ -36,7 +36,7 @@ check:
 
 # runs shellcheck on all scripts
 lint:
-  find . -iname "*.sh" -type f -exec shellcheck "{}" ';'
+  fd --extension sh --type file --exec shellcheck
 
 # watch latest gh workflow run
 ci:
