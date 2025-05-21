@@ -4,7 +4,6 @@ export registry := "ghcr.io/tuque-os"
 export image := env("IMAGE", "localhost/tuque-os/workstation:latest")
 export fedora_version := env("FEDORA_VERSION", "42")
 export bib_image := env("BIB_IMAGE", "quay.io/centos-bootc/bootc-image-builder:latest")
-export ssh_port := "1867"
 
 build:
   just_files/build.sh
@@ -43,14 +42,11 @@ build-qcow2 $target_image=(image): build && (_build-bib "qcow2" "image.toml" tar
 
 build-vm: build-qcow2
 
-run-vm:
-  just_files/run-vm.sh
+run-vm image="workstation":
+  gnome-boxes output/{{ image }}.iso &
 
 run-container:
   podman run --rm -it {{ image }} bash
-
-vm-ssh:
-  ssh fedora@vsock/{{ ssh_port }}
 
 # check Justfile syntax
 check:
