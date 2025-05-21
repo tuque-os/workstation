@@ -1,8 +1,0 @@
-[[customizations.filesystem]]
-mountpoint = "/"
-minsize = "20 GiB"
-
-[[customizations.user]]
-name = "fedora"
-password = "fedora"
-groups = ["wheel"]
