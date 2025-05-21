@@ -10,5 +10,5 @@ BUILD_ARGS+=("--build-arg" "SHA_HEAD_SHORT=$(git rev-parse --short HEAD)")
 podman build \
   "${BUILD_ARGS[@]}" \
   --pull=newer \
-  --tag "${image:?}" \
+  --tag "${registry:?}/${image:?}:latest" \
   .

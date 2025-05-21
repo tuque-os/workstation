@@ -1,38 +1,17 @@
 mod? titanoboa
 
 export registry := "ghcr.io/tuque-os"
-export image := env("IMAGE", "localhost/tuque-os/workstation:latest")
+export image := env("IMAGE", "workstation")
 export fedora_version := env("FEDORA_VERSION", "42")
 
 build:
   just_files/build.sh
 
-build-iso $image="workstation":
-  #!/usr/bin/env bash
-  set -eoux pipefail
+build-iso:
+  just_files/build-iso.sh
 
-  HOOK_rootfs="$(realpath ./iso_files/configure_iso.sh)"
-  IMAGE="{{ registry }}/{{ image }}"
-  FLATPAKS=""
-  sudo \
-    HOOK_post_rootfs="${HOOK_rootfs}" \
-    just titanoboa::build \
-    "$IMAGE" \
-    "1" \
-    "$FLATPAKS" \
-    "squashfs" \
-    "NONE" \
-    "$IMAGE" \
-    "1"
-
-  sudo chown "$(id -u):$(id -g)" output.iso
-  mkdir -p "./output/"
-  sha256sum output.iso | tee "./output/{{ image }}.iso-CHECKSUM"
-  mv output.iso "./output/{{ image }}.iso"
-  sudo just titanoboa::clean
-
-run-vm image="workstation":
-  gnome-boxes output/{{ image }}.iso &
+run-vm:
+ gnome-boxes output/{{ image }}.iso &
 
 run-container:
   podman run --rm -it {{ image }} bash
@@ -52,3 +31,4 @@ ci:
 
 clean:
   rm -rf output
+  sudo podman rmi "quay.io/fedora/fedora" "{{ registry }}/{{ image }}"
