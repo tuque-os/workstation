@@ -1,15 +1,20 @@
 {
   "default": [
     {
-      "type": "insecureAcceptAnything"
+      "type": "reject"
     }
   ],
   "transports": {
     "docker": {
+      "": [
+        {
+          "type": "insecureAcceptAnything"
+        }
+      ],
       "ghcr.io/tuque-os/workstation": [
         {
           "type": "sigstoreSigned",
-          "keyPath": "/etc/pki/containers/ghcr.io-tuque-os-workstation.pub",
+          "keyPath": "/etc/pki/containers/tuque.pub",
           "signedIdentity": {
             "type": "matchRepository"
           }

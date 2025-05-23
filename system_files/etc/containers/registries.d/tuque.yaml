@@ -1,3 +1,3 @@
 docker:
-  ghcr.io:
+  ghcr.io/tuque-os/workstation:
     use-sigstore-attachments: true
