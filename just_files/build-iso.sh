@@ -17,6 +17,6 @@ sudo \
 
 sudo chown "$(id -u):$(id -g)" output.iso
 mkdir -p "./output/"
-sha256sum output.iso | tee "./output/${image}.iso-CHECKSUM"
 mv output.iso "./output/${image}.iso"
+sha256sum "./output/${image}.iso" | tee "./output/${image}.iso-CHECKSUM"
 sudo just titanoboa::clean
