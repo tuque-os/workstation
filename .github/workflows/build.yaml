@@ -4,9 +4,8 @@ on:
   pull_request:
     branches:
       - master
-  # enable when ready
-  # schedule:
-  #   - cron: '05 10 * * *'  # 10:05am UTC everyday
+  schedule:
+    - cron: '05 10 * * *'  # 10:05am UTC everyday
   push:
     branches:
       - master
