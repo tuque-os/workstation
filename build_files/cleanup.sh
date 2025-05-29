@@ -6,11 +6,6 @@ set -ouex pipefail
 dnf5 clean all
 
 # clean temporary files
-rm -rf /tmp/*
-# shellcheck disable=SC2115
-rm -rf /var/*
-
-# Restore and setup directories
-mkdir -p /tmp
-mkdir -p /var/tmp \
-&& chmod -R 1777 /var/tmp
+rm -rf /tmp/* || true
+find /var/* -maxdepth 0 -type d \! -name cache \! -name log -exec rm -fr {} \;
+find /var/cache/* -maxdepth 0 -type d \! -name libdnf5 \! -name rpm-ostree -exec rm -fr {} \;
