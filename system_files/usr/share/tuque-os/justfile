@@ -1,0 +1,6 @@
+[private]
+default:
+    @just --list
+
+hello:
+    echo "world"
