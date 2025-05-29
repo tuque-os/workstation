@@ -1,6 +1,16 @@
 #!/bin/bash
 
 set -ouex pipefail
-shopt -s extglob
 
-find /var/* -maxdepth 0 -type d \! -name cache \! -name log -exec rm -fr {} \;
+# clean package manager cache
+dnf5 clean all
+
+# clean temporary files
+rm -rf /tmp/*
+# shellcheck disable=SC2115
+rm -rf /var/*
+
+# Restore and setup directories
+mkdir -p /tmp
+mkdir -p /var/tmp \
+&& chmod -R 1777 /var/tmp

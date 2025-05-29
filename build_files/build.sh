@@ -18,4 +18,5 @@ rm /etc/skel/.bash*
 # cleanup
 /ctx/build_files/cleanup.sh
 
+bootc container lint
 ostree container commit
