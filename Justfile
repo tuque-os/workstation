@@ -20,9 +20,26 @@ run-container:
 check:
     just --unstable --fmt --check -f Justfile
 
+# run lint group
+lint: lint-shell
+
 # runs shellcheck on all scripts
-lint:
+[group('lint')]
+lint-shell:
     fd --extension sh --type file --exec shellcheck
+
+# verify scripts are executable
+[group('lint')]
+lint-bin-exec:
+    #!/usr/bin/env bash
+    set -e
+
+    fd build_files iso_files just_files \
+        --extension sh --type file --exec test -x
+
+    for file in system_files/usr/bin/*; do
+        test -x "$file"
+    done
 
 # watch latest gh workflow run
 ci:
