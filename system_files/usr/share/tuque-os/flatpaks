@@ -6,10 +6,10 @@ de.haeckerfelix.Fragments
 dev.bragefuglseth.Keypunch
 dev.qwery.AddWater
 net.nokyan.Resources
-org.gnome.Evince
+org.gnome.baobab
+org.gnome.Decibels
+org.gnome.Loupe
+org.gnome.Papers
+org.gnome.Showtime
 org.gtk.Gtk3theme.adw-gtk3-dark
 org.telegram.desktop
-org.gnome.Decibels
-org.gnome.baobab
-org.gnome.Loupe
-org.gnome.Showtime
