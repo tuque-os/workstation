@@ -4,10 +4,11 @@
     "OfferToSaveLoginsDefault": false,
     "Extensions": {
       "Install": [
-        "https://addons.mozilla.org/firefox/downloads/file/4492375/ublock_origin-1.64.0.xpi",
         "https://addons.mozilla.org/firefox/downloads/file/4429228/libredirect-3.1.0.xpi",
         "https://addons.mozilla.org/firefox/downloads/file/4488139/darkreader-4.9.106.xpi",
-        "https://addons.mozilla.org/firefox/downloads/file/4490230/protondb_for_steam-2.3.0.xpi"
+        "https://addons.mozilla.org/firefox/downloads/file/4490230/protondb_for_steam-2.3.0.xpi",
+        "https://addons.mozilla.org/firefox/downloads/file/4491195/proton_pass-1.31.2.xpi",
+        "https://addons.mozilla.org/firefox/downloads/file/4492375/ublock_origin-1.64.0.xpi"
       ]
     },
     "FirefoxHome": {
