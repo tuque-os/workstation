@@ -2,5 +2,5 @@
 default:
     @just --list
 
-hello:
-    echo "world"
+install-flatpaks:
+    xargs -a {{justfile_directory()}}/flatpaks flatpak --system -y install
