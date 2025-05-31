@@ -14,3 +14,4 @@ dnf -y remove "${EXCLUDED_PACKAGES[@]}"
 dnf -y install "${INCLUDED_PACKAGES[@]}"
 
 systemctl disable flatpak-add-fedora-repos.service
+systemctl enable update-flatpaks.timer
