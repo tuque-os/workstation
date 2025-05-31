@@ -1,3 +1,6 @@
+[org.gnome.shell]
+favorite-apps=['org.gnome.Nautilus.desktop', 'org.gnome.Ptyxis.desktop', 'com.vscodium.codium.desktop', 'org.mozilla.firefox.desktop']
+
 [org.gnome.desktop.background]
 picture-uri='file:///usr/share/backgrounds/gnome/adwaita-l.jpg'
 picture-uri-dark='file:///usr/share/backgrounds/gnome/adwaita-d.jpg'
