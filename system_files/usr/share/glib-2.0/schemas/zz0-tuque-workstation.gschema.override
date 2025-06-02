@@ -14,6 +14,9 @@ gtk-enable-primary-paste=false
 gtk-theme='adw-gtk3-dark'
 icon-theme='MoreWaita'
 
+[org.gnome.desktop.input-sources]
+xkb-options=['caps:ctrl_modifier']
+
 [org.gnome.desktop.peripherals/mouse]
 accel-profile='flat'
 speed=0.0
