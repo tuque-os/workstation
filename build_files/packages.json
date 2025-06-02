@@ -8,6 +8,7 @@
   "include": [
     "adw-gtk3-theme",
     "bat",
+    "difftastic",
     "eza",
     "fastfetch",
     "fd-find",

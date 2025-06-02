@@ -4,3 +4,6 @@ default:
 
 install-flatpaks:
     xargs -a {{justfile_directory()}}/flatpaks flatpak --system -y install
+
+setup-git:
+    @/usr/libexec/tuque-os/setup-git.sh
