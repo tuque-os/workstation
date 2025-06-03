@@ -2,9 +2,11 @@
 default:
     @just --list
 
+# install default flatpaks
 install-flatpaks:
     xargs -a {{justfile_directory()}}/flatpaks flatpak --system -y install
 
+# initialize sshkey and configure git
 setup-git:
     @/usr/libexec/tuque-os/setup-git.sh
 
