@@ -8,9 +8,10 @@ dev.qwery.AddWater
 net.nokyan.Resources
 org.gnome.baobab
 org.gnome.Decibels
+org.gnome.Fractal
 org.gnome.Loupe
 org.gnome.Papers
 org.gnome.Showtime
+org.gnome.Weather
 org.gtk.Gtk3theme.adw-gtk3-dark
 org.telegram.desktop
-org.gnome.Fractal
