@@ -6,6 +6,7 @@ de.haeckerfelix.Fragments
 dev.bragefuglseth.Keypunch
 dev.qwery.AddWater
 net.nokyan.Resources
+org.freedesktop.Platform.ffmpeg-full
 org.gnome.baobab
 org.gnome.Decibels
 org.gnome.Fractal
@@ -14,4 +15,5 @@ org.gnome.Papers
 org.gnome.Showtime
 org.gnome.Weather
 org.gtk.Gtk3theme.adw-gtk3-dark
+org.mozilla.firefox
 org.telegram.desktop
