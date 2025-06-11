@@ -29,9 +29,29 @@
         "Value": false,
         "Status": "default"
       },
-      "privacy.donottrackheader.enabled": {
-        "Value": true,
+      "browser.urlbar.suggest.topsites": {
+        "Value": false,
         "Status": "default"
+      },
+      "browser.urlbar.suggest.quickactions": {
+        "Value": false,
+        "Status": "default"
+      },
+      "browser.urlbar.suggest.engines": {
+        "Value": false,
+        "Status": "default"
+      },
+      "browser.toolbars.bookmarks.visibility": {
+        "Value": "never",
+        "Status": "default"
+      },
+      "browser.tabs.hoverPreview.showThumbnails": {
+        "Value": false,
+        "Status": "default"
+      },
+      "browser.startup.homepage": {
+        "Value": false,
+        "Status": "about:home"
       }
     }
   }
