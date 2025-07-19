@@ -1,15 +1,43 @@
 {
   "policies": {
-    "HttpsOnlyMode": "enabled",
+    "HttpsOnlyMode": "force_enabled",
     "OfferToSaveLoginsDefault": false,
-    "Extensions": {
-      "Install": [
-        "https://addons.mozilla.org/firefox/downloads/file/4429228/libredirect-3.1.0.xpi",
-        "https://addons.mozilla.org/firefox/downloads/file/4488139/darkreader-4.9.106.xpi",
-        "https://addons.mozilla.org/firefox/downloads/file/4490230/protondb_for_steam-2.3.0.xpi",
-        "https://addons.mozilla.org/firefox/downloads/file/4491195/proton_pass-1.31.2.xpi",
-        "https://addons.mozilla.org/firefox/downloads/file/4492375/ublock_origin-1.64.0.xpi"
-      ]
+    "ExtensionSettings": {
+      "ProtonPass": {
+        "default_area": "navbar",
+        "installation_mode": "normal_installed",
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/proton-pass/latest.xpi",
+        "private_browsing": true,
+        "temporarily_allow_weak_signatures": false
+      },
+      "uBlock0": {
+        "default_area": "navbar",
+        "installation_mode": "normal_installed",
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi",
+        "private_browsing": true,
+        "temporarily_allow_weak_signatures": false
+      },
+      "DarkReader": {
+        "default_area": "navbar",
+        "installation_mode": "normal_installed",
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/darkreader/latest.xpi",
+        "private_browsing": true,
+        "temporarily_allow_weak_signatures": false
+      },
+      "LibRedirect": {
+        "default_area": "navbar",
+        "installation_mode": "normal_installed",
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/libredirect/latest.xpi",
+        "private_browsing": true,
+        "temporarily_allow_weak_signatures": false
+      },
+      "MultiAccountContainers": {
+        "default_area": "navbar",
+        "installation_mode": "normal_installed",
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/multi-account-containers/latest.xpi",
+        "private_browsing": true,
+        "temporarily_allow_weak_signatures": false
+      }
     },
     "FirefoxHome": {
       "Search": false,
@@ -21,8 +49,19 @@
       "Snippets": false,
       "Locked": true
     },
+    "FirefoxSuggest": {
+      "ImproveSuggest": false,
+      "SponsoredSuggestions": false,
+      "WebSuggestions": false
+    },
     "SearchEngines": {
-      "Default": "DuckDuckGo"
+      "Default": "DuckDuckGo",
+      "DefaultPrivate": "DuckDuckGo",
+      "Remove": [
+        "Amazon.ca",
+        "Amazon.com",
+        "Google"
+      ]
     },
     "Preferences": {
       "browser.tabs.closeWindowWithLastTab": {
@@ -53,6 +92,13 @@
         "Value": false,
         "Status": "about:home"
       }
+    },
+    "EnableTrackingProtection": {
+      "Category": "strict",
+      "Cryptomining": true,
+      "EmailTracking": true,
+      "Fingerprinting": true,
+      "Value": true
     }
   }
 }
