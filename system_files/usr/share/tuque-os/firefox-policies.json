@@ -2,6 +2,16 @@
   "policies": {
     "HttpsOnlyMode": "force_enabled",
     "OfferToSaveLoginsDefault": false,
+    "Extensions": {
+        "Install": [
+            "https://addons.mozilla.org/firefox/downloads/latest/proton-pass/latest.xpi",
+            "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi",
+            "https://addons.mozilla.org/firefox/downloads/latest/darkreader/latest.xpi",
+            "https://addons.mozilla.org/firefox/downloads/latest/libredirect/latest.xpi",
+            "https://addons.mozilla.org/firefox/downloads/latest/multi-account-containers/latest.xpi",
+            "https://addons.mozilla.org/firefox/downloads/latest/protondb-for-steam/latest.xpi"
+        ]
+    },
     "ExtensionSettings": {
       "ProtonPass": {
         "default_area": "navbar",
