@@ -10,3 +10,5 @@ set -x FZF_DEFAULT_OPTS "\
 
 set -x BAT_STYLE "plain"
 set -x BAT_THEME "Catppuccin Mocha"
+
+set -x WGETRC "/usr/share/tuque-os/wgetrc"
