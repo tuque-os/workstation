@@ -1,7 +1,5 @@
 # App Config
 
-set -x MICRO_TRUECOLOR 1
-
 # fzf colours
 set -x FZF_DEFAULT_OPTS "\
 --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
