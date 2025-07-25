@@ -47,6 +47,6 @@ for extension in "${EXTENSIONS[@]}"; do
   $RUN_CMD --install-extension "$extension"
 done
 
-for file in "keybindings" "settings"; do
-  ln -sf "${SRC_DIR}/${file}.json" "${USER_DIR}/${file}.json"
-done
+echo "Copying settings..."
+
+cp "${SRC_DIR}/*.json" "${USER_DIR}/"
