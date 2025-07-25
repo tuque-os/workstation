@@ -10,6 +10,10 @@ install-flatpaks:
 setup-git:
     @/usr/libexec/tuque-os/setup-git.sh
 
+# initialize settings and extensions
+setup-vscodium:
+    @/usr/libexec/tuque-os/setup-vscodium.sh
+
 # configure capslock key as an additional ctrl
 caps-as-ctrl:
 	gsettings set org.gnome.desktop.input-sources xkb-options \[\'caps:ctrl_modifier\'\]

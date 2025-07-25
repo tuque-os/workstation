@@ -1,0 +1,115 @@
+{
+  "[c]": {
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features",
+    "editor.tabSize": 2
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features",
+    "editor.tabSize": 2
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jinja-html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.tabSize": 2
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.tabSize": 2
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "vscode.css-language-features",
+    "editor.tabSize": 2
+  },
+  "[shellscript]": {
+    "editor.defaultFormatter": "mkhl.shfmt"
+  },
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml"
+  },
+  "[xml]": {},
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml",
+    "editor.tabSize": 2
+  },
+  "ansible.python.interpreterPath": "/usr/bin/python",
+  "codesnap.containerPadding": "1em",
+  "codesnap.showWindowControls": false,
+  "codesnap.shutterAction": "copy",
+  "containers.containerClient": "com.microsoft.visualstudio.containers.podman",
+  "editor.codeLens": false,
+  "editor.colorDecorators": false,
+  "editor.fontFamily": "Adwaita Mono",
+  "editor.fontLigatures": true,
+  "editor.inlayHints.enabled": "offUnlessPressed",
+  "editor.minimap.enabled": false,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.rulers": [
+    80,
+    120
+  ],
+  "editor.selectionClipboard": false,
+  "editor.stickyScroll.enabled": false,
+  "editor.suggestSelection": "first",
+  "explorer.confirmDelete": false,
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.factorypath": true,
+    "**/.project": true,
+    "**/.settings": true
+  },
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "go.toolsManagement.autoUpdate": false,
+  "go.useLanguageServer": true,
+  "java.debug.settings.enableRunDebugCodeLens": false,
+  "java.referencesCodeLens.enabled": false,
+  "material-icon-theme.files.associations": {
+    "Justfile": "makefile"
+  },
+  "mesonbuild.buildFolder": "build",
+  "mesonbuild.configureOnOpen": false,
+  "python.languageServer": "None",
+  "redhat.telemetry.enabled": false,
+  "rust-analyzer.check.command": "clippy",
+  "rust-analyzer.checkOnSave": true,
+  "rust-analyzer.diagnostics.disabled": [
+    "missing-unsafe"
+  ],
+  "security.workspace.trust.untrustedFiles": "open",
+  "shellcheck.run": "onSave",
+  "telemetry.telemetryLevel": "off",
+  "terminal.integrated.defaultProfile.linux": "fish",
+  "terminal.integrated.env.linux": {
+    "GDK_BACKEND": "wayland"
+  },
+  "terminal.integrated.sendKeybindingsToShell": false,
+  "typst-lsp.exportPdf": "never",
+  "vs-kubernetes": {
+    "disable-linters": [
+      "resource-limits"
+    ]
+  },
+  "window.customTitleBarVisibility": "never",
+  "window.menuBarVisibility": "toggle",
+  "window.titleBarStyle": "native",
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.editor.empty.hint": "hidden",
+  "workbench.editor.enablePreview": false,
+  "workbench.editorAssociations": {
+    "*.svg": "default"
+  },
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.startupEditor": "none",
+  "workbench.statusBar.visible": true
+}
