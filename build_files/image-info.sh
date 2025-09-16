@@ -2,8 +2,8 @@
 
 set -ouex pipefail
 
-# https://en.wikipedia.org/wiki/Elizabeth_Monk
-CODE_NAME="Carmichael"
+# https://en.wikipedia.org/wiki/William_Lyon_Mackenzie_King
+CODE_NAME="Lyon"
 
 {
   echo "IMAGE_NAME=Tuque OS"

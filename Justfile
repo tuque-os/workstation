@@ -2,7 +2,7 @@ mod? titanoboa
 
 export registry := "ghcr.io/tuque-os"
 export image := env("IMAGE", "workstation")
-export fedora_version := env("FEDORA_VERSION", "42")
+export fedora_version := env("FEDORA_VERSION", "43")
 
 build:
     just_files/build.sh

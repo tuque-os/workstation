@@ -18,7 +18,6 @@ env:
   IMAGE_DESC: "Tuque Linux Workstation Edition"
   DEFAULT_TAG: "latest"
   IMAGE_REGISTRY: "ghcr.io/${{ github.repository_owner }}"
-  FEDORA_MAJOR_VERSION: "42"
   ARTIFACTHUB_LOGO_URL: "https://avatars.githubusercontent.com/u/203909039?s=48&v=4"
 
 concurrency:
@@ -96,7 +95,6 @@ jobs:
           labels: ${{ steps.metadata.outputs.labels }}
           oci: true
           build-args: |
-            FEDORA_MAJOR_VERSION=${{ env.FEDORA_MAJOR_VERSION }}
             SHA_HEAD_SHORT=${{ steps.build_args.outputs.sha }}
             VERSION=${{ env.FEDORA_MAJOR_VERSION }}.${{ steps.build_args.outputs.date }}
 
