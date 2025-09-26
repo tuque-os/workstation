@@ -49,4 +49,4 @@ done
 
 echo "Copying settings..."
 
-cp "${SRC_DIR}/*.json" "${USER_DIR}/"
+cp "${SRC_DIR}"/*.json "${USER_DIR}/"
