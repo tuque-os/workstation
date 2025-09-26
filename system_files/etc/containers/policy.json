@@ -19,6 +19,15 @@
             "type": "matchRepository"
           }
         }
+      ],
+      "ghcr.io/tuque-os/toolbox": [
+        {
+          "type": "sigstoreSigned",
+          "keyPath": "/etc/pki/containers/tuque-toolbox.pub",
+          "signedIdentity": {
+            "type": "matchRepository"
+          }
+        }
       ]
     },
     "docker-daemon": {
