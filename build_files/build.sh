@@ -17,5 +17,3 @@ rm /etc/skel/.bash*
 
 # cleanup
 /ctx/build_files/cleanup.sh
-
-ostree container commit
