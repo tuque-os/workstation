@@ -1,6 +1,8 @@
 app.drey.Warp
 com.github.PintaProject.Pinta
 com.github.tchx84.Flatseal
+com.valvesoftware.Steam
+com.valvesoftware.Steam.CompatibilityTool.Proton-GE
 com.vscodium.codium
 de.haeckerfelix.Fragments
 dev.bragefuglseth.Keypunch
