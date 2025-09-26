@@ -94,6 +94,7 @@
     "GDK_BACKEND": "wayland"
   },
   "terminal.integrated.sendKeybindingsToShell": false,
+  "terminal.integrated.stickyScroll.enabled": false,
   "typst-lsp.exportPdf": "never",
   "vs-kubernetes": {
     "disable-linters": [
