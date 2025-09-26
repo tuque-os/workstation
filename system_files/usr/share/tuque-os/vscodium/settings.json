@@ -95,6 +95,11 @@
         "path": "/app/bin/host-spawn",
         "args": ["fish"],
         "overrideName": true
+      },
+      "toolbox": {
+        "path": "/app/bin/host-spawn",
+        "args": ["toolbox", "enter", "dev"],
+        "overrideName": true
       }
     },
   "terminal.integrated.env.linux": {
