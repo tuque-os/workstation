@@ -25,3 +25,7 @@ firefox-policy:
 
     sudo mkdir -p "$FLATPAK_POLICIES"
     sudo cp /usr/share/tuque-os/firefox-policies.json "${FLATPAK_POLICIES}/policies.json"
+
+# create default toolbox container
+toolbox:
+    toolbox create --container tuqueos-toolbox
