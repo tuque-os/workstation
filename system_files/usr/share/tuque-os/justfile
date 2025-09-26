@@ -28,4 +28,4 @@ firefox-policy:
 
 # create default toolbox container
 toolbox:
-    toolbox create --container tuqueos-toolbox
+    toolbox create --container dev
