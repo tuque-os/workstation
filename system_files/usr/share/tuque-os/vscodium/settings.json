@@ -89,7 +89,14 @@
   "security.workspace.trust.untrustedFiles": "open",
   "shellcheck.run": "onSave",
   "telemetry.telemetryLevel": "off",
-  "terminal.integrated.defaultProfile.linux": "fish",
+  "terminal.integrated.defaultProfile.linux": "host",
+  "terminal.integrated.profiles.linux": {
+      "host": {
+        "path": "/app/bin/host-spawn",
+        "args": ["fish"],
+        "overrideName": true
+      }
+    },
   "terminal.integrated.env.linux": {
     "GDK_BACKEND": "wayland"
   },
