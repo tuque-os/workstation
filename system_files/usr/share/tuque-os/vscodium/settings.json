@@ -6,6 +6,9 @@
     "editor.defaultFormatter": "vscode.css-language-features",
     "editor.tabSize": 2
   },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features",
     "editor.tabSize": 2
@@ -43,6 +46,7 @@
     "editor.tabSize": 2
   },
   "ansible.python.interpreterPath": "/usr/bin/python",
+  "chat.agent.enabled": false,
   "codesnap.containerPadding": "1em",
   "codesnap.showWindowControls": false,
   "codesnap.shutterAction": "copy",
@@ -90,20 +94,26 @@
   "shellcheck.run": "onSave",
   "telemetry.telemetryLevel": "off",
   "terminal.integrated.defaultProfile.linux": "host",
-  "terminal.integrated.profiles.linux": {
-      "host": {
-        "path": "/app/bin/host-spawn",
-        "args": ["fish"],
-        "overrideName": true
-      },
-      "toolbox": {
-        "path": "/app/bin/host-spawn",
-        "args": ["toolbox", "enter", "dev"],
-        "overrideName": true
-      }
-    },
   "terminal.integrated.env.linux": {
     "GDK_BACKEND": "wayland"
+  },
+  "terminal.integrated.profiles.linux": {
+    "host": {
+      "args": [
+        "fish"
+      ],
+      "overrideName": true,
+      "path": "/app/bin/host-spawn"
+    },
+    "toolbox": {
+      "args": [
+        "toolbox",
+        "enter",
+        "dev"
+      ],
+      "overrideName": true,
+      "path": "/app/bin/host-spawn"
+    }
   },
   "terminal.integrated.sendKeybindingsToShell": false,
   "terminal.integrated.stickyScroll.enabled": false,
@@ -123,6 +133,7 @@
     "*.svg": "default"
   },
   "workbench.iconTheme": "material-icon-theme",
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
   "workbench.startupEditor": "none",
   "workbench.statusBar.visible": true
 }
