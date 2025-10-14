@@ -41,7 +41,6 @@
   ],
   "exclude": [
     "fedora-workstation-repositories",
-    "firefox",
     "gnome-classic-session",
     "gnome-shell-extension-background-logo",
     "gnome-shell-extension-common",

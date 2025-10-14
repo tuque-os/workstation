@@ -18,14 +18,6 @@ setup-vscodium:
 caps-as-ctrl:
 	gsettings set org.gnome.desktop.input-sources xkb-options \[\'caps:ctrl_modifier\'\]
 
-# install the firefox policy file as a flatpak extension
-firefox-policy:
-    #!/usr/bin/bash
-    FLATPAK_POLICIES="/var/lib/flatpak/extension/org.mozilla.firefox.systemconfig/x86_64/stable/policies"
-
-    sudo mkdir -p "$FLATPAK_POLICIES"
-    sudo cp /usr/share/tuque-os/firefox-policies.json "${FLATPAK_POLICIES}/policies.json"
-
 # create default toolbox container
 toolbox:
     toolbox create --container dev
