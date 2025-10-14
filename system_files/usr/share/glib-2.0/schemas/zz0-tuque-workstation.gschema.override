@@ -1,5 +1,5 @@
 [org.gnome.shell]
-favorite-apps=['org.gnome.Nautilus.desktop', 'org.gnome.Ptyxis.desktop', 'com.vscodium.codium.desktop', 'org.mozilla.firefox.desktop']
+favorite-apps=['org.gnome.Nautilus.desktop', 'org.gnome.Ptyxis.desktop', 'codium.desktop', 'org.mozilla.firefox.desktop']
 
 [org.gnome.desktop.background]
 picture-uri='file:///usr/share/backgrounds/gnome/adwaita-l.jxl'
