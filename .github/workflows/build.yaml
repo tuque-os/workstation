@@ -42,6 +42,7 @@ jobs:
       - name: Generate build args
         id: build_args
         run: |
+          echo "date=$(date -u +%Y\-%m\-%d\T%H\:%M\:%S\Z)" >> $GITHUB_OUTPUT
           echo "version=${{ env.FEDORA_MAJOR_VERSION }}.$(git rev-parse --short HEAD).$(date +%Y%m%d)" >> $GITHUB_OUTPUT
 
       - name: Image Metadata
@@ -57,7 +58,7 @@ jobs:
             type=ref,event=pr
           labels: |
             io.artifacthub.package.readme-url=https://raw.githubusercontent.com/${{ github.repository_owner }}/${{ env.IMAGE_NAME }}/refs/heads/master/README.md
-            org.opencontainers.image.created=${{ steps.date.outputs.date }}
+            org.opencontainers.image.created=${{ steps.build_args.outputs.date }}
             org.opencontainers.image.description=${{ env.IMAGE_DESC }}
             org.opencontainers.image.documentation=https://raw.githubusercontent.com/${{ github.repository_owner }}/${{ env.IMAGE_NAME }}/refs/heads/master/README.md
             org.opencontainers.image.source=https://github.com/${{ github.repository_owner }}/${{ env.IMAGE_NAME }}/blob/master/Containerfile
