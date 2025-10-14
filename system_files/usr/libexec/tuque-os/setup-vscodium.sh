@@ -3,8 +3,7 @@
 set -euo pipefail
 
 SRC_DIR="/usr/share/tuque-os/vscodium"
-USER_DIR="${HOME}/.var/app/com.vscodium.codium/config/VSCodium/User"
-RUN_CMD="flatpak run com.vscodium.codium"
+USER_DIR="${HOME}/.config/VSCodium/User"
 
 EXTENSIONS=(
   "adpyke.codesnap"
@@ -12,8 +11,6 @@ EXTENSIONS=(
   "bierner.markdown-preview-github-styles"
   "blueglassblock.better-json5"
   "bmalehorn.vscode-fish"
-  "catppuccin.catppuccin-vsc-icons"
-  "catppuccin.catppuccin-vsc-pack"
   "catppuccin.catppuccin-vsc"
   "charliermarsh.ruff"
   "coolbear.systemd-unit-file"
@@ -23,7 +20,6 @@ EXTENSIONS=(
   "llvm-vs-code-extensions.vscode-clangd"
   "mads-hartmann.bash-ide-vscode"
   "mkhl.shfmt"
-  "ms-azuretools.vscode-containers"
   "ms-azuretools.vscode-containers"
   "ms-kubernetes-tools.vscode-kubernetes-tools"
   "ms-pyright.pyright"
@@ -44,7 +40,7 @@ EXTENSIONS=(
 echo "Installing extensions..."
 
 for extension in "${EXTENSIONS[@]}"; do
-  $RUN_CMD --install-extension "$extension"
+  codium --install-extension "$extension"
 done
 
 echo "Copying settings..."
