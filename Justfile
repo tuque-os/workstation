@@ -5,7 +5,12 @@ export image := env("IMAGE", "workstation")
 export fedora_version := env("FEDORA_VERSION", "43")
 
 build:
-    just_files/build.sh
+    podman build \
+    --build-arg "VERSION=${fedora_version}.$(git rev-parse --short HEAD).$(date +%Y%m%d)" \
+    --build-arg "FEDORA_MAJOR_VERSION=${fedora_version}" \
+    --pull=newer \
+    --tag "${registry}/${image}:latest" \
+    .
 
 build-iso:
     just_files/build-iso.sh

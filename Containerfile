@@ -5,7 +5,6 @@ COPY / /
 
 FROM quay.io/fedora/fedora-silverblue:${FEDORA_MAJOR_VERSION}
 
-ARG SHA_HEAD_SHORT="dedbeef"
 ARG VERSION=""
 
 RUN --mount=type=bind,from=ctx,src=/,dst=/ctx \
