@@ -3,7 +3,8 @@
     "alternateved/eza",
     "atim/starship",
     "dusansimic/themes",
-    "ecomaikgolf/typst"
+    "ecomaikgolf/typst",
+    "lilay/topgrade"
   ],
   "include": [
     "adw-gtk3-theme",
@@ -34,6 +35,7 @@
     "rustfmt",
     "starship",
     "steam-devices",
+    "topgrade",
     "typst",
     "wl-clipboard",
     "yt-dlp",
