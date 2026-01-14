@@ -10,6 +10,10 @@ for copr in "${COPR_REPOS[@]}"; do
   dnf5 -y copr enable "$copr"
 done
 
+dnf install \
+  "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm" \
+  "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm"
+
 dnf -y remove "${EXCLUDED_PACKAGES[@]}"
 dnf -y install "${INCLUDED_PACKAGES[@]}"
 
