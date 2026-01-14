@@ -14,6 +14,8 @@ dnf install \
   "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm" \
   "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm"
 
+dnf swap ffmpeg-free ffmpeg --allowerasing
+
 dnf -y remove "${EXCLUDED_PACKAGES[@]}"
 dnf -y install "${INCLUDED_PACKAGES[@]}"
 
