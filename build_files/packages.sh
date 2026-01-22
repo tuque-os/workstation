@@ -7,7 +7,7 @@ mapfile -t INCLUDED_PACKAGES < <(jq -r ".include.[]" /ctx/build_files/packages.j
 mapfile -t EXCLUDED_PACKAGES < <(jq -r ".exclude.[]" /ctx/build_files/packages.json)
 
 # RPM Fusion repo
-dnf install \
+dnf -y install \
   "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm" \
   "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm"
 
