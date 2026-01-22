@@ -6,7 +6,7 @@ set -ouex pipefail
 CODE_NAME="Lyon"
 
 {
-  echo "IMAGE_NAME=Tuque OS"
+  echo "IMAGE_NAME=\"Tuque OS\""
   echo "IMAGE_VARIANT=Workstation"
   echo "IMAGE_VERSION=\"${VERSION:-00.00000000}\""
   echo "IMAGE_CODE_NAME=\"${CODE_NAME}\""
