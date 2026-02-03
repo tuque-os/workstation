@@ -1,5 +1,6 @@
 {
   "policies": {
+    "DisableAppUpdate": true,
     "HttpsOnlyMode": "force_enabled",
     "OfferToSaveLoginsDefault": false,
     "Extensions": {
@@ -48,6 +49,10 @@
         "private_browsing": true,
         "temporarily_allow_weak_signatures": false
       }
+    },
+    "Hopepage": {
+      "URL": "about:home",
+      "StartPage": "homepage"
     },
     "FirefoxHome": {
       "Search": false,
@@ -99,10 +104,6 @@
       "browser.tabs.hoverPreview.showThumbnails": {
         "Value": false,
         "Status": "default"
-      },
-      "browser.startup.homepage": {
-        "Value": false,
-        "Status": "about:home"
       }
     },
     "EnableTrackingProtection": {
@@ -111,6 +112,10 @@
       "EmailTracking": true,
       "Fingerprinting": true,
       "Value": true
-    }
+    },
+    "GenerativeAI": {
+      "Enabled": false
+    },
+    "DontCheckDefaultBrowser": true
   }
 }
