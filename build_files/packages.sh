@@ -26,3 +26,6 @@ dnf -y install "${INCLUDED_PACKAGES[@]}"
 
 systemctl disable flatpak-add-fedora-repos.service
 systemctl enable update-flatpaks.timer
+
+# remove Fedora Firefox prefs
+rm /usr/lib64/firefox/browser/defaults/preferences/firefox-redhat-default-prefs.js
