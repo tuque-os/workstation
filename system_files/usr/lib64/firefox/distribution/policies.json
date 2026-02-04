@@ -47,7 +47,7 @@
         "temporarily_allow_weak_signatures": false
       }
     },
-    "Hopepage": {
+    "Homepage": {
       "StartPage": "none"
     },
     "FirefoxHome": {
