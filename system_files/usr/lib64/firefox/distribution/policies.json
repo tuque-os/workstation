@@ -51,8 +51,7 @@
       }
     },
     "Hopepage": {
-      "URL": "about:home",
-      "StartPage": "homepage"
+      "StartPage": "none"
     },
     "FirefoxHome": {
       "Search": false,
