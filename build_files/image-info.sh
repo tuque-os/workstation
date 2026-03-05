@@ -2,8 +2,8 @@
 
 set -ouex pipefail
 
-# https://en.wikipedia.org/wiki/William_Lyon_Mackenzie_King
-CODE_NAME="Lyon"
+# https://en.wikipedia.org/wiki/Tommy_Douglas (elected premier of Sakatchewan in 1944)
+CODE_NAME="Tommy"
 
 {
   echo "IMAGE_NAME=\"Tuque OS\""
