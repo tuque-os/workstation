@@ -15,7 +15,6 @@ dnf -y install \
 dnf -y swap ffmpeg-free ffmpeg --allowerasing
 dnf -y install intel-media-driver
 dnf -y swap mesa-va-drivers mesa-va-drivers-freeworld
-dnf -y swap mesa-vdpau-drivers mesa-vdpau-drivers-freeworld
 
 for copr in "${COPR_REPOS[@]}"; do
   dnf5 -y copr enable "$copr"
