@@ -12,9 +12,9 @@ dnf -y install \
   "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm"
 
 # codecs and hardware acceleration
-# dnf -y swap ffmpeg-free ffmpeg --allowerasing
+dnf -y swap ffmpeg-free ffmpeg --allowerasing
 dnf -y install intel-media-driver
-# dnf -y swap mesa-va-drivers mesa-va-drivers-freeworld
+dnf -y swap mesa-va-drivers mesa-va-drivers-freeworld
 
 for copr in "${COPR_REPOS[@]}"; do
   dnf5 -y copr enable "$copr"
