@@ -8,7 +8,7 @@ picture-uri-dark='file:///usr/share/backgrounds/gnome/adwaita-d.jxl'
 [org.gnome.desktop.interface]
 enable-hot-corners=false
 color-scheme="prefer-dark"
-clock-format="12h"
+clock-format="24h"
 clock-show-weekday=true
 gtk-enable-primary-paste=false
 gtk-theme='adw-gtk3-dark'
