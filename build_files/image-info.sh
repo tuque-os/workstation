@@ -2,8 +2,8 @@
 
 set -ouex pipefail
 
-# https://en.wikipedia.org/wiki/Tommy_Douglas (elected premier of Sakatchewan in 1944)
-CODE_NAME="Tommy"
+# https://www.ccohs.ca/oshanswers/legisl/billc45.html
+CODE_NAME="Westray"
 
 {
   echo "IMAGE_NAME=\"Tuque OS\""
